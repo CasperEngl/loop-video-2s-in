@@ -1,0 +1,14 @@
+{
+  "name": "loop-video-2s-in",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Casper Engelmann",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "vite": "^2.5.2"
+  }
+}

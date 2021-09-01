@@ -20,15 +20,25 @@
 
       video.removeAttribute("loop");
 
-      // Listen for video to end
-      video.addEventListener(
-        "ended",
-        () => {
+      // Listen for video progress
+      video.addEventListener("timeupdate", function () {
+        const secondsFromEnd = video.duration - video.currentTime;
+
+        if (secondsFromEnd < 2) {
           video.currentTime = 2;
           video.play();
-        },
-        false
-      );
+        }
+      });
+
+      // Listen for video to end
+      // video.addEventListener(
+      //   "ended",
+      //   () => {
+      //     video.currentTime = 2;
+      //     video.play();
+      //   },
+      //   false
+      // );
     </script>
   </body>
 </html>
